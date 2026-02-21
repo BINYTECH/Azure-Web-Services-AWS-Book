@@ -1,0 +1,43 @@
+*** NETWORKING ***
+The term networking refers to interconnected devices that can exchange data and resources.
+Networking in the AWS Cloud consists of the infrastructure and services working together to host your applications, data, and any other resources you might need. 
+
+*** Amazon Virtual Private Cloud (Amazon VPC) ***
+An Amazon VPC lets you provision a logically isolated section of the AWS Cloud where you can launch AWS resources in a virtual network that you define.
+With Amazon VPC, you can provision an isolated section of the AWS Cloud. In this isolated section, you can launch resources in a virtual network that you define. 
+It provides three main benefits. It helps increase security because you can secure and monitor connections, screen traffic, and restrict instance access. 
+Amazon VPC gives you full control over your resource placement, connectivity, and security. 
+The convenience of using Amazon VPC means you will spend less time setting up, managing, and validating your virtual network when compared to on-premises network management.
+
+*** Subnet ***
+Subnets are used to organize your resources and can be made publicly or privately accessible. A private subnet is commonly used to contain resources like a database storing customer or transactional information. 
+A public subnet is commonly used for resources like a customer-facing website.
+
+
+===>AWS Cloud is the outermost layer which contains everything.[Think it like BOX that contains services, apps].
+
+===>Region is inside AWS Cloud. AWS Regions are separate geographic areas. You choose your Region based on your users' geographic location for lower latency, 
+    compliance and data residency requirements, available services, and cost.
+
+===>Amazon VPC is a solid box, and it represents your isolated, logically segmented network within AWS. A VPC helps you to control your network resources and security.
+
+===>Availability Zones are shown as separate boxes across a region. AZs consist of one or more discrete data centers, each with redundant power, networking, and 
+    connectivity, and housed in separate facilities. Using multiple AZs can protect your applications from the failure of a single location in the Region.
+
+===>Subnets are essentially segments of your VPC, allowing you to divide your VPC into smaller, manageable sections. A subnet is a range of IP addresses in your VPC.
+
+===>Private subnets are designed to isolate resources that shouldn't be directly exposed to the public internet. In diagrams, they are illustrated with solid boxes.
+
+===>Public subnets are designed to provide direct internet access to resources placed inside them. To allow access, they are connected with an internet gateway. 
+
+
+*** Connecting your resources with an internet gateway ***
+To allow public traffic from the internet to access your VPC, you attach an internet gateway to the VPC. An internet gateway is a connection between a VPC and the internet. 
+You can think of an internet gateway as being similar to a doorway that customers use to enter the coffee shop. Without an internet gateway, no one can access the resources within your VPC.
+
+*** Virtual Private Gateway ***
+VPN creates a connection that is more like a secure tunnel through the internet. Using encryption, it hides and protects everything you send and receive from outside eyes.
+A virtual private gateway is the component in the AWS Cloud that makes it possible for you to connect this protected traffic to enter the VPC. 
+With a VPN connection, your data travels privately and safely, hidden from others using the same route.A VPN encrypts your internet traffic, helping protect it from anyone who might try to intercept or monitor it.
+With a virtual private gateway, you can establish a VPN connection between your VPC and a private network, such as an on-premises data center or internal corporate network.
+A virtual private gateway allows traffic into the VPC only if it is coming from an approved network.
